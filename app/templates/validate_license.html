@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Validate License{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Validate License</h2>
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Validate</button>
+    </form>
+    <div class="mt-4">
+        {% if message %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

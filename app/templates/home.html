@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>License Management System</h1>
+    <p>Welcome to the License Management System. Choose an action below:</p>
+
+    <div class="mt-4">
+        <a href="{% url 'validate_license' %}" class="btn btn-primary">Validate License</a>
+        <a href="{% url 'create_license' %}" class="btn btn-success">Create License</a>
+        <a href="{% url 'revoke_license' %}" class="btn btn-danger">Revoke License</a>
+    </div>
+</div>
+{% endblock %}
